@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Card-tendencias{
+    @apply w-32 h-60 flex-none rounded-xl bg-transparent shadow-sm shadow-cuarternary transform transition-all hover:-translate-y-2 hover:shadow-xl lg:h-[22rem] lg:w-44 cursor-pointer
+}
+
+.card-text{
+    @apply text-xs text-gray-300 text-center inline-block align-middle font-medium p-1 lg:text-[16px] lg:pt-3
+}
+
+.Card-peliculas{
+    @apply w-32 h-60 flex-none rounded-xl bg-transparent shadow-sm shadow-cuarternary transform transition-all hover:-translate-y-2 hover:shadow-xl lg:h-[22rem] lg:w-44 cursor-pointer
+}
+
+.Card-series{
+    @apply w-32 h-60 flex-none rounded-xl bg-transparent shadow-sm shadow-cuarternary transform transition-all hover:-translate-y-2 hover:shadow-xl lg:h-[22rem] lg:w-44 cursor-pointer
+}
+
+.Card-relacionados{
+    @apply w-32 h-[192px] flex-none rounded-xl shadow-md transform transition-all hover:-translate-y-2 hover:shadow-xl lg:w-36 lg:h-auto
+}
+
+.Card-episodios{
+    @apply w-44 h-40 flex-none rounded-xl shadow-md transform transition-all hover:shadow-xl lg:w-52 lg:h-52
+}
+
+.header-searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    height: 56px;
+    background: linear-gradient(#130B2B, #130B2B) padding-box,
+        linear-gradient(to right, #fe53bab1, #09fbd3aa) border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+    filter: drop-shadow(0 0 0.5rem #494949);
+    color: white;
+}
+
+.header-searchForm-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    height: 48px;
+    background: linear-gradient(#130B2B, #130B2B) padding-box,
+        linear-gradient(to right, #fe53bab1, #09fbd3aa) border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+    filter: drop-shadow(0 0 0.5rem #494949);
+    color: white;
+}
+
+.card-inicio-pelis {
+    background: linear-gradient(#130B2B, #130B2B) padding-box,
+        linear-gradient(to bottom, #09fbd3aa, #fe53bab1 ) border-box;
+    border: 2px solid transparent;
+    color: white;
+}
+
+.card-inicio-series {
+    background: linear-gradient(#130B2B, #130B2B) padding-box,
+        linear-gradient(to bottom, #fe53bab1, #09fbd3aa ) border-box;
+    border: 2px solid transparent;
+    color: white;
+}

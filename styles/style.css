@@ -1,0 +1,131 @@
+body::-webkit-scrollbar{
+    width: 14px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+/*Seccion pagina principal*/
+.en-camino-preview::-webkit-scrollbar{
+    height: 10px;
+}
+
+.en-camino-preview::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.popular-movies::-webkit-scrollbar{
+    height: 10px;
+}
+
+.popular-movies::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.popular-series::-webkit-scrollbar{
+    height: 10px;
+}
+
+.popular-series::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+/*Seccion peliculas*/
+.tendencias-peliculas::-webkit-scrollbar{
+    height: 10px;
+}
+
+.tendencias-peliculas::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.mas-valoradas::-webkit-scrollbar{
+    height: 10px;
+}
+
+.mas-valoradas::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+/*Seccion Series*/
+.tendencias-series::-webkit-scrollbar{
+    height: 10px;
+}
+
+.tendencias-series::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.mas-valoradas-series::-webkit-scrollbar{
+    height: 10px;
+}
+
+.mas-valoradas-series::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+
+.categories-preview::-webkit-scrollbar{
+    height: 10px;
+}
+
+.categories-preview::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+/*Seccion detalle de peliculas*/
+.detail-movie::-webkit-scrollbar{
+    width: 10px;
+}
+
+.detail-movie::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.recomendations-movies-desktop::-webkit-scrollbar{
+    height: 10px;
+}
+
+.recomendations-movies-desktop::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+/*Seccion detalle de series*/
+.detail-serie::-webkit-scrollbar{
+    width: 10px;
+}
+
+.detail-serie::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.recomendations-series-desktop::-webkit-scrollbar{
+    height: 10px;
+}
+
+.recomendations-series-desktop::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
+
+.episodes-series-desktop::-webkit-scrollbar{
+    height: 10px;
+}
+
+.episodes-series-desktop::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #fe53bab1, #09fbd3aa);
+    border-radius: 12px;
+}
