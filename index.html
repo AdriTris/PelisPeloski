@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pelis Peloski</title>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link type="image/png" sizes="16x16" rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtUlEQVR4nO2WwQ2CQBBFpwUPdsORFqzF6xy5euBgC7ZgLTRgE89ABIkM66K7sAovmcsmn79/MmRWZLUAGXCMXJllrDy5Pqric6red1rUaTxymal0JtZZWsYs1eqIaJqJJdHhOgHnKMa4W92IgQNwm3O4tKfZeaYPl/hFa6UPPlw6ENvpgw+XjhjvgctXxizV6jeoI6W3Nq3fSezLtJSeKbe1WLOtRfmJtfg/b64cKCJXPjBeDXdo1i9jTgzqsgAAAABJRU5ErkJggg==" />
+  <link rel="stylesheet" href="/assets/index-a08c495c.css">
+</head>
+
+<body class="w-full h-auto relative bg-dark">
+  <header class="hidden relative" id="seccion-header">
+    <nav class="w-full h-14 flex justify-center items-center px-3 lg:justify-between md:justify-between">
+      <h1 class="logo text-white text-2xl font-bold lg:text-3xl cursor-pointer">Pelis Peloski</h1>
+      <div class="max-sm:hidden lg:h-12 lg:flex md:flex space-x-3">
+        <button
+          class="btn-peliculas w-auto h-auto flex justify-center items-center px-6 hover:border hover:border-cuarternary/50 rounded-full bg-gradient-to-t from-cuarternary/20 cursor-pointer">
+          <p class="text-white text-lg">Películas</p>
+        </button>
+        <button
+          class="btn-series w-auto h-auto flex justify-center items-center px-6 hover:border hover:border-terciary/50 rounded-full bg-gradient-to-t from-terciary/20 cursor-pointer">
+          <p class="text-white text-lg">Series</p>
+        </button>
+      </div>
+      <form class="max-sm:hidden w-1/3 h-12 lg:flex md:flex relative">
+        <div class="w-full flex items-center">
+          <input
+            class="input-search-header w-full text-lg p-4 rounded-full focus:outline-none header-searchForm-desktop"
+            placeholder="¿Qué vas a ver hoy?" type="search" />
+          <button class="btn-search-header w-8 h-8 rounded-full absolute right-0 top-0 mt-2 mr-2 bg-dark">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVR4nO2WTUoDQRCFBzXZ+LNT8AqJd1DXujCiXkEM/p9CvIZGIZeYTcK81zQhxgEjJu5dx4WuRirWwLiJ6U4IgiloGJiu/t5UV7/pIJjGX4k4jvMkD0jeAWgDeNchzxV5J3PGCjXG7ALokkwGDQAdkqWRgUmSzJC8ziz+QPIUQKHZbM7LIFmMouiMZCsj4EpyvcFUKIAPAIeDFlORRzI3hXuXlwo1xqwPmxdF0UYGvuMEjeM4n+6pfKmH6LKW/cVamxs6kd/d299Tn72qVquzAB5V+J4L+F7BJ4FnADhX8K1L0rMmFXzB0u26RtslqSdJYRgu+IJrtdqiVq03UTCAJWcwxlBqY8xa2tku4IokiSP5gkleqvgbn+PUGuE4xbrGvquBdDTxyBUM4Fi/thuG4ZxTMslSapligw7QTQCfKnrbVXQ/xOgzfl2WEgaDy3ucgb7V6/WVwCeSJJlJ4SrgUR2pKEdNhnQvgIvMnvah6XxvuIT8ZeRY/HYRIPkKYEtgGa8eDW6tzYnhi/cCeBJjkKuPCJIjI92bbaSxwl2j0WgspzcTEWutXQ3+Bbz+s+xmYuAUTtKSjCYKnkag8QWdVXLzW96SkAAAAABJRU5ErkJggg==" alt="Buscar">
+          </button>
+        </div>
+      </form>
+    </nav>
+  </header>
+
+  <div class="w-[8rem] h-3/4 absolute bg-cuarternary/70 rounded-[50%] top-32 blur-[200px] lg:top-72 lg:w-[18rem]"></div>
+  <div class="w-[8rem] h-3/4 absolute bg-primary/70 rounded-[50%] top-32 right-0 blur-[200px] lg:top-72 lg:w-[18rem]">
+  </div>
+
+  <main class="relative">
+
+    <!-- pagina principal -->
+    <section class="hidden w-full h-full" id="principal">
+
+      <!-- buscador -->
+      <section class="w-full flex flex-col pb-3 lg:pb-0">
+        <form class="sm:hidden w-full h-16 pt-3 flex items-center relative">
+          <div class="w-full flex items-center justify-around">
+            <input
+              class="input-search-mobile-home w-11/12 text-lg p-4 rounded-full focus:outline-none header-searchForm"
+              placeholder="¿Que vas a ver hoy?" type="search" />
+            <button class="btn-search-mobile-home w-8 h-8 bg-search-button rounded-full absolute right-8 bg-dark">
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- cards series peliculas -->
+      <section class="md:hidden w-full h-auto text-white p-5 flex justify-between gap-10">
+        <div class="card-peliculas w-48 h-60 flex flex-col border card-inicio-pelis rounded-2xl -rotate-6">
+          <div class="w-full h-4/5 p-2 bg-gradient-to-tl from-terciary/50 via-dark to-terciary/50 rounded-t-2xl">
+            <img class="w-full h-full object-contain" src="/assets/peliculas-ef24aa37.png" alt="Peliculas" />
+          </div>
+          <div
+            class="w-full h-1/5 bg-gradient-to-l from-terciary/20 via-dark to-terciary/20 border-dashed border-t-2 border-t-gray-300 flex items-center justify-center rounded-b-2xl">
+            <p class="text-md font-bold tracking-widest">PELÍCULAS</p>
+          </div>
+        </div>
+        <div class="card-series w-48 h-60 flex flex-col border card-inicio-series rounded-2xl rotate-6">
+          <div class="w-full h-4/5 p-2 bg-gradient-to-tr from-cuarternary/20 via-dark to-cuarternary/20 rounded-t-2xl">
+            <img class="w-full h-full object-cover transform -scale-x-100" src="/assets/series-f78daf53.png" alt="Series" />
+          </div>
+          <div
+            class="w-full h-1/5 bg-gradient-to-l from-cuarternary/10 via-dark to-cuarternary/10 border-dashed border-t-2 border-t-gray-300 flex items-center justify-center rounded-b-2xl">
+            <p class="text-md font-bold tracking-widest">SERIES</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- carrusel -->
+      <section class="containter-carrusel max-sm:hidden w-full h-[32rem] overflow-hidden">
+        <div class="carruseles w-full h-full flex " id="slider">
+          <div class="slider-div w-auto h-full flex-none"></div>
+          <div class="slider-div w-auto h-full flex-none"></div>
+          <div class="slider-div w-auto h-full flex-none"></div>
+          <div class="slider-div w-auto h-full flex-none"></div>
+          <div class="slider-div w-full h-full flex-none"></div>
+        </div>
+        <div class="w-full h-8 flex justify-between items-center">
+          <button
+            class="btnLeft w-8 h-8 rounded-full bg-gray-300/40 shadow-sm shadow-dark absolute -translate-y-72 left-2">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="">
+          </button>
+          <button
+            class="btnRight w-8 h-8 rounded-full bg-gray-300/40 shadow-sm shadow-dark absolute -translate-y-72 right-2">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfklEQVR4nO3VMQrCMBSA4Yx1ETo42tMInqEXdNLVK7g49Sgujp/EdhA3UR5V3wchkOWHkEdKSSk9wQLbupdIOBidsIwMH6dwbBwrDA/xM9qMz/fa0WHzxupxeenBGaNXn7ebZ7jCOvyqv3KmZfSXP4l9eLRCM41Rcz9I6W/dAF0USsYFZ+8aAAAAAElFTkSuQmCC" alt="">
+          </button>
+        </div>
+      </section>
+
+      <!-- En camino-->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="upcoming">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">En Camino</p>
+        <div
+          class="en-camino-preview w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-tendencias">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Categorias-->
+      <!-- <section class="w-full h-auto flex flex-col px-4 text-transparent pt-4 lg:pt-12" id="categorias-preview">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Categorias</p>
+        <div
+          class="categories-preview w-full h-24 p-0.5 items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-3 scrollbar-face-color-primary">
+          
+        </div>
+      </section> -->
+
+      <!-- Peliculas populares -->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="peliculas-populares">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Películas populares</p>
+        <div
+          class="popular-movies w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-peliculas">
+            <div class="h-4/5">
+                <img class="w-full h-full object-cover rounded-t-xl" src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+                <div class="h-1/5 flex flex-col justify-center items-center">
+                    <p class="card-text">Harry Potter</p>
+                </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Series populares -->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="series-populares">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Series populares</p>
+        <div
+          class="popular-series w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-series">
+            <div class="h-4/5">
+                <img class="w-full h-full object-cover rounded-t-xl" src="${urlImage}${serie.poster_path}" alt="${serie.name}" />
+                <div class="h-1/5 flex flex-col justify-center items-center">
+                    <p class="card-text">${serie.name}</p>
+                </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- seccion Peliculas -->
+    <section class="hidden w-full h-full" id="seccion-peliculas">
+      <!-- buscador -->
+      <section class="w-full flex flex-col pb-3 lg:pb-0">
+        <form class="sm:hidden w-full h-16 pt-3 flex items-center relative">
+          <div class="w-full flex items-center justify-around">
+            <input
+              class="input-search-mobile-movies w-11/12 text-lg p-4 rounded-full focus:outline-none header-searchForm"
+              placeholder="¿Que vas a ver hoy?" type="search" />
+            <button class="btn-search-mobile-movies w-8 h-8 bg-search-button rounded-full absolute right-8 bg-dark">
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Tendencias-->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="tendencias-peliculas">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Peliculas en Tendencia</p>
+        <div
+          class="tendencias-peliculas w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-tendencias">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Las mas valoradas-->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="mas-valoradas-movies">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Las peliculas más valoradas</p>
+        <div
+          class="mas-valoradas w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-tendencias">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Categorias-->
+      <section class="w-full h-auto flex flex-col px-4 pt-4 text-transparent lg:pt-12" id="categorias-peliculas">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Explora nuestras categorias</p>
+        <div class="categories-movies w-full h-full items-center grid grid-cols-2 lg:grid-cols-4 pt-4 gap-3">
+          <!-- <div
+            class="w-auto h-auto bg-gradient-to-r from-primary/30 to-primary/60 hover:from-gray-800 hover:to-gray-500 rounded-full cursor-pointer shadow-md">
+            <p class="px-4 py-2 text-md text-white font-medium lg:text-lg">Todos</p>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- seccion Series -->
+    <section class="hidden w-full h-full" id="seccion-series">
+      <!-- buscador -->
+      <section class="w-full flex flex-col pb-3 lg:pb-0">
+        <form class="sm:hidden w-full h-16 pt-3 flex items-center relative">
+          <div class="w-full flex items-center justify-around">
+            <input
+              class="input-search-mobile-series w-11/12 text-lg p-4 rounded-full focus:outline-none header-searchForm"
+              placeholder="¿Que vas a ver hoy?" type="search" />
+            <button class="btn-search-mobile-series w-8 h-8 bg-search-button rounded-full absolute right-8 bg-dark">
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Tendencias-->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="tendencias-series">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Series en Tendencia</p>
+        <div
+          class="tendencias-series w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-tendencias">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Las mas valoradas-->
+      <section class="h-auto flex flex-col px-4 pt-4 lg:pt-12" id="mas-valoradas-series">
+        <p class="text-white text-2xl font-semibold lg:text-3xl">Las series más valoradas</p>
+        <div
+          class="mas-valoradas-series w-auto h-[17rem] items-center overflow-x-auto overscroll-x-contain overflow-y-hidden flex space-x-5 p-0.5 lg:h-96">
+          <!-- <div class="Card-tendencias">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Categorias-->
+      <section class="w-full h-auto flex flex-col px-4 pt-4 text-transparent lg:pt-12" id="categorias-series">
+        <p class="text-white text-2xl font-semibold pt-4 lg:text-3xl">Explora nuestras categorias</p>
+        <div class="categories-series w-full h-full items-center grid grid-cols-2 gap-3 pt-4 lg:grid-cols-4">
+          <!-- <div
+            class="w-auto h-auto bg-gradient-to-r from-primary/30 to-primary/60 hover:from-gray-800 hover:to-gray-500 rounded-full cursor-pointer shadow-md">
+            <p class="px-4 py-2 text-md text-white font-medium lg:text-lg">Todos</p>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- detalles de pelicula -->
+    <section class="hidden w-full h-full relative bg-dark" id="detalles-pelicula">
+      <div class="w-full h-full">
+        <div class="w-full h-16 bg-gradient-to-b from-dark absolute flex items-center p-4">
+          <button class="btn-flecha-det-peliculas w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full"
+            href="#">
+            <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+          </button>
+        </div>
+        <div class="w-full h-full lg:h-[40rem] lg:bg-cover lg:bg-center">
+          <img class="movie-detail-image-desktop w-full h-full object-cover max-sm:hidden" src="" alt="">
+          <img class="movie-detail-image-mobile w-full h-full sm:hidden" src="" alt="">
+        </div>
+        <section
+          class="w-full h-auto absolute top-[60%] bg-gradient-to-t from-dark from-80% flex flex-col gap-3 p-4 lg:h-full lg:w-11/12  lg:bg-gradient-to-l lg:from-10% lg:top-0 lg:right-0 ">
+          <div
+            class="detail-movie w-full h-full lg:flex lg:flex-col lg:items-center lg:justify-center lg:self-end lg:gap-3 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
+            <div class="w-full h-auto flex justify-between items-center pt-32 lg:pt-12">
+              <div class="w-2/3 lg:w-3/4">
+                <h1 class="movie-detail-title text-xl text-white font-bold lg:text-3xl"></h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="w-6 h-6 lg:w-8 lg:h-8" src="../icons/estrella.png" alt="estrellas">
+                <p class="movie-detail-score font-semibold text-md text-gray-500 lg:text-lg"></p>
+              </div>
+            </div>
+            <p class="movie-detail-overview text-gray-400 lg:text-[16px] lg:text-white"></p>
+            <div class="w-full h-auto flex flex-col gap-3 pt-2">
+              <h2 class="text-gray-200 text-lg font-semibold sm:hidden">Categorias relacionadas</h2>
+              <div class="categories-detail-movie w-full h-auto grid grid-cols-2 gap-4">
+                <div
+                  class="h-10 bg-gradient-to-r from-primary/70 to-cuarternary/70 flex justify-center items-center rounded-full hover:from-primary/50 hover:to-cuarternary/50">
+                  <p class="text-white font-semibold">Fantasia</p>
+                </div>
+                <div
+                  class="h-10 bg-gradient-to-r from-primary/70 to-cuarternary/70 flex justify-center items-center rounded-full hover:from-primary/50 hover:to-cuarternary/50">
+                  <p class="text-white font-semibold">Aventura</p>
+                </div>
+                <div
+                  class="h-10 bg-gradient-to-r from-primary/70 to-cuarternary/70 flex justify-center items-center rounded-full hover:from-primary/50 hover:to-cuarternary/50">
+                  <p class="text-white font-semibold">Fantasia</p>
+                </div>
+              </div>
+            </div>
+            <section class="w-full h-auto flex flex-col gap-1 pt-3 bg-dark sm:hidden" id="titulos-relacionados">
+              <p class="text-white text-lg font-semibold lg:text-2xl">Titulos relacionados</p>
+              <div
+                class="recomendations-movies-mobile w-auto h-52 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+                <!-- <div class="Card-relacionados">
+                  <div class="h-auto rounded-b-full">
+                    <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                      alt="Harry Potter">
+                  </div>
+                </div> -->
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <section class="w-full h-auto flex flex-col gap-1 pt-3 absolute p-4 bg-dark lg:top-[100%] max-sm:hidden"
+        id="titulos-relacionados">
+        <p class="text-white text-lg font-semibold lg:text-2xl">Titulos relacionados</p>
+        <div
+          class="recomendations-movies-desktop w-auto items-center overflow-x-auto overscroll-x-contain flex space-x-3 h-64">
+          <!-- <div class="Card-relacionados">
+            <div class="h-auto rounded-b-full">
+              <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png" alt="Harry Potter">
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- detalles de serie -->
+    <section class="hidden w-full h-full relative bg-dark" id="detalles-serie">
+      <div class="w-full h-full">
+        <div class="w-full h-16 bg-gradient-to-b from-dark absolute flex items-center p-4">
+          <button class="btn-flecha-det-series w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full"
+            href="#">
+            <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+          </button>
+        </div>
+        <div class="w-full h-full lg:h-[42rem] lg:bg-cover lg:bg-center">
+          <img class="serie-detail-image-desktop w-full h-full object-cover max-sm:hidden" src="" alt="">
+          <img class="serie-detail-image-mobile w-full h-full sm:hidden" src="" alt="">
+        </div>
+        <section
+          class="w-full h-auto absolute top-[60%] bg-gradient-to-t from-dark from-80% flex flex-col gap-3 p-4 lg:h-full lg:w-11/12 lg:bg-gradient-to-l lg:from-10% lg:top-0 lg:right-0 lg:scroll-y-c">
+          <div
+            class="detail-serie w-full h-full lg:flex lg:flex-col lg:items-center lg:justify-center lg:self-end lg:gap-3 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
+            <div class="w-full h-auto flex justify-between items-center pt-32 lg:pt-12">
+              <div class="w-full ">
+                <h1 class="serie-detail-title text-2xl text-white font-bold lg:text-3xl"></h1>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 place-content-between lg:gap-48">
+              <p class="number-seasons font-semibold text-md text-gray-500 text-start"></p>
+              <div class="flex gap-2 justify-end items-center">
+                <img class="w-6 h-6 lg:w-8 lg:h-8" src="../icons/estrella.png" alt="estrellas">
+                <p class="serie-detail-score font-semibold text-md text-gray-500 lg:text-lg"></p>
+              </div>
+            </div>
+            <p class="serie-detail-overview text-gray-400 lg:text-[16px] lg:text-white"></p>
+            <div class="w-full h-auto flex flex-col gap-3 pt-2">
+              <h2 class="text-gray-200 text-lg font-semibold sm:hidden">Categorias relacionadas</h2>
+              <div class="categories-detail-serie w-full h-auto grid grid-cols-2 gap-4">
+                <!-- <div
+                  class="h-10 bg-gradient-to-r from-primary/70 to-cuarternary/70 flex justify-center items-center rounded-full hover:from-primary/50 hover:to-cuarternary/50">
+                  <p class="text-white font-semibold">Fantasia</p>
+                </div> -->
+              </div>
+            </div>
+            <section class="w-full h-auto flex flex-col gap-1 pt-3 bg-dark sm:hidden" id="titulos-relacionados">
+              <p class="text-white text-lg font-semibold lg:text-2xl">Hecha un vistazo a las temporadas</p>
+              <div
+                class="seasons-series-mobile w-auto h-52 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+                <!-- <div class="Card-relacionados">
+                  <div class="h-auto rounded-b-full">
+                    <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                      alt="Harry Potter">
+                  </div>
+                </div> -->
+              </div>
+            </section>
+            <section class="w-full h-auto flex flex-col gap-1 pt-3 bg-dark sm:hidden" id="titulos-relacionados">
+              <p class="text-white text-lg font-semibold lg:text-2xl">Titulos relacionados</p>
+              <div
+                class="recomendations-series-mobile w-auto h-52 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+                <!-- <div class="Card-relacionados">
+                  <div class="h-auto rounded-b-full">
+                    <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                      alt="Harry Potter">
+                  </div>
+                </div> -->
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <section class="w-full h-auto flex flex-col gap-2 pt-3 absolute p-4 bg-dark lg:top-[100%] max-sm:hidden"
+        id="titulos-relacionados">
+        <p class="text-white text-lg font-semibold lg:text-2xl">Hecha un vistazo a las temporadas</p>
+        <div
+          class="seasons-series-desktop w-auto h-52 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+          <!-- <div class="Card-relacionados">
+            <div class="h-auto rounded-b-full">
+              <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                alt="Harry Potter">
+            </div>
+          </div> -->
+        </div>
+        <p class="text-white text-lg font-semibold lg:text-2xl">Titulos relacionados</p>
+        <div
+          class="recomendations-series-desktop w-auto h-64 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+          <!-- <div class="Card-relacionados">
+            <div class="h-auto rounded-b-full">
+              <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png" alt="Harry Potter">
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- detalle de temporada de la serie  -->
+    <section class="hidden w-full h-full relative bg-dark" id="detalles-serie-temporada">
+      <div class="w-full h-full">
+        <div class="w-full h-16 bg-gradient-to-b from-dark absolute flex items-center p-4">
+          <button
+            class="btn-flecha-det-series-temporada w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full"
+            href="#">
+            <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+          </button>
+        </div>
+        <div class="w-full h-full lg:h-[42rem] lg:bg-cover lg:bg-center">
+          <img class="serie-detail-season-image-desktop w-11/12 h-full object-cover max-sm:hidden" src="" alt="">
+          <img class="serie-detail-season-image-mobile w-full h-full sm:hidden" src="" alt="">
+        </div>
+        <section
+          class="w-full h-auto absolute top-[60%] bg-gradient-to-t from-dark from-80% flex flex-col gap-3 p-4 lg:h-full lg:w-11/12 lg:bg-gradient-to-l lg:from-10% lg:top-0 lg:right-0 lg:scroll-y-c">
+          <div
+            class="detail-serie-season w-full h-full lg:flex lg:flex-col lg:items-center lg:justify-center lg:self-end lg:gap-3 lg:w-1/3 lg:overflow-y-auto lg:overscroll-y-contain">
+            <div class="w-full h-auto flex justify-between items-center pt-32 lg:pt-12">
+              <div class="w-full ">
+                <h1 class="serie-season-detail-title text-2xl text-white font-bold lg:text-3xl"></h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="w-6 h-6 lg:w-8 lg:h-8" src="../icons/estrella.png" alt="estrellas">
+                <p class="serie-season-detail-score font-semibold text-md text-gray-500 lg:text-lg"></p>
+              </div>
+            </div>
+            <p class="serie-season-detail-overview text-gray-400 lg:text-[16px] lg:text-white"></p>
+            <section class="w-full h-auto flex flex-col gap-1 pt-3 bg-dark sm:hidden" id="titulos-relacionados">
+              <p class="text-white text-lg font-semibold lg:text-2xl">Capitulos</p>
+              <div
+                class="episodes-season-mobile w-auto h-48 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+                <!-- <div class="Card-relacionados">
+                  <div class="h-auto rounded-b-full">
+                    <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                      alt="Harry Potter">
+                  </div>
+                </div> -->
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <section class="w-full h-auto flex flex-col gap-2 pt-3 absolute p-4 bg-dark lg:top-[100%] max-sm:hidden"
+        id="titulos-relacionados">
+        <p class="text-white text-lg font-semibold lg:text-2xl">Capitulos</p>
+        <div
+          class="episodes-series-desktop w-auto h-60 items-center overflow-x-auto overscroll-x-contain flex space-x-3">
+          <!-- <div class="Card-relacionados">
+            <div class="h-auto rounded-b-full">
+              <img class="w-32 h-full object-cover rounded-xl lg:w-36" src="../img/harrypotter1.png"
+                alt="Harry Potter">
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- segun categorias de peliculas -->
+    <section class="hidden w-full h-full relative " id="categoriaPelicula">
+      <!-- categoria-->
+      <div class="w-full h-auto absolute flex items-center px-4 space-x-4 lg:pt-4">
+        <button class="btn-flecha-cat-peliculas w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full">
+          <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+        </button>
+        <p class="titulo-categoria-pelicula text-white text-2xl font-semibold lg:text-3xl"></p>
+      </div>
+      <section class="h-full flex flex-col p-4 pt-10 lg:pt-16" id="category">
+        <div
+          class="categoria-pelicula w-auto h-[17rem] items-center grid grid-cols-2 gap-4 py-3 place-items-center lg:h-96 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-5">
+          <!-- <div class="Card-peliculas">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- segun categorias de series -->
+    <section class="hidden w-full h-auto relative" id="categoriaSerie">
+      <!-- categoria-->
+      <div class="w-full h-auto absolute flex items-center px-4 space-x-4 lg:pt-4">
+        <button class="btn-flecha-cat-series w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full">
+          <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+        </button>
+        <p class="titulo-categoria-serie text-white text-2xl font-semibold lg:text-3xl"></p>
+      </div>
+
+      <section class="h-full flex flex-col p-4 pt-10 lg:pt-16" id="category">
+        <div
+          class="categoria-serie w-auto h-[17rem] items-center grid grid-cols-2 gap-4 py-3 place-items-center lg:h-96 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-5">
+          <!-- <div class="Card-peliculas">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- seccion de busqueda peliculas-->
+    <section class="hidden w-full h-auto relative" id="search-movies">
+      <div class="w-full h-auto absolute top-20 flex items-center px-4 space-x-4 lg:pt-4 lg:top-1">
+        <button class="btn-flecha-search-movie w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full">
+          <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+        </button>
+      </div>
+
+      <!-- buscador -->
+      <section class="w-full flex flex-col pb-3 lg:pb-0">
+        <form class="sm:hidden w-full h-16 pt-3 flex items-center relative">
+          <div class="w-full flex items-center justify-around">
+            <input
+              class="input-search-mobile-series w-11/12 text-lg p-4 rounded-full focus:outline-none header-searchForm"
+              placeholder="¿Que vas a ver hoy?" type="search" />
+            <button class="btn-search-mobile-series w-8 h-8 bg-search-button rounded-full absolute right-8 bg-dark">
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="h-full flex flex-col p-4 pt-10 lg:pt-16">
+        <div
+          class="search-movie w-auto h-[17rem] items-center grid grid-cols-2 gap-4 py-3 place-items-center lg:h-96 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-5">
+          <!-- <div class="Card-peliculas">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- seccion de busqueda series-->
+    <section class="hidden w-full h-auto relative" id="search-series">
+      <div class="w-full h-auto absolute top-20 flex items-center px-4 space-x-4 lg:pt-4 lg:top-1">
+        <button class="btn-flecha-search-serie w-8 h-8 bg-gray-300/40 shadow-sm shadow-cuarternary rounded-full">
+          <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3VMQqAIBSAYcdammuo0wTdoQsWtNYZOkL3aKjxD7FaEyyNeh+I4PLDQ1EpIX4NiIFK7z6jCTBidCGiWh8iOgGpRD813hmogdJhFTbhlvutQH4Vbh4ILzbhJ0adu1yuTPmAxF8y9sFLONi3eACi/XlE56EQQhkbA8JKxgoXJksAAAAASUVORK5CYII=" alt="regresar">
+        </button>
+      </div>
+
+      <!-- buscador -->
+      <section class="w-full flex flex-col pb-3 lg:pb-0">
+        <form class="sm:hidden w-full h-16 pt-3 flex items-center relative">
+          <div class="w-full flex items-center justify-around">
+            <input
+              class="input-search-mobile-series w-11/12 text-lg p-4 rounded-full focus:outline-none header-searchForm"
+              placeholder="¿Que vas a ver hoy?" type="search" />
+            <button class="btn-search-mobile-series w-8 h-8 bg-search-button rounded-full absolute right-8 bg-dark">
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="h-full flex flex-col p-4 pt-10 lg:pt-16">
+        <div
+          class="search-serie w-auto h-[17rem] items-center grid grid-cols-2 gap-4 py-3 place-items-center lg:h-96 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-5">
+          <!-- <div class="Card-peliculas">
+            <div class="h-4/5">
+              <img class="w-full h-full object-cover rounded-t-xl"
+                src="https://es.web.img2.acsta.net/pictures/21/11/12/09/12/3634160.jpg" alt="Harry Potter" />
+              <div class="h-1/5 flex flex-col justify-center items-center">
+                <p class="card-text">
+                  Harry Potter
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="./assets/slider.js"></script>
+  <script src="./assets/nodes.js"></script>
+  <script src="./assets/main.js"></script>
+  <script src="./assets/navigation.js"></script>
+</body>
+
+</html>
